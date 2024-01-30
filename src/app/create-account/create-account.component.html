@@ -1,0 +1,52 @@
+<p>create-account works!</p>
+
+
+<div class="container">
+    <form class="col-6"  [formGroup]="loginForm" >
+        <div class="row">
+            <div class="col mb-2">
+                <label for="name">Name</label>
+                <input type="text" id="name" formControlName="name">
+            </div>
+            <div class="col mb-2">
+                <label for="mobile">Mobile</label>
+                <input type="text" id="mobile"  formControlName="mobile">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class=" col">
+                <label for="email">Email Id</label>
+                <input type="email" id="email"   formControlName="email">
+            </div>
+            <div class=" col">
+                <!-- <label for="email">Email Id</label>
+                <input type="email" id="email"   formControlName="email"> -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col mb-2"> 
+                <label for="pwd">Password</label>
+                <input type="password" id="pwd"  formControlName="password"  
+                >
+                <!-- [ngClass]="{'is-invalid': isLoginSubmitted && r['password'].errors }" -->
+                <!-- <div *ngIf="isLoginSubmitted && r['password'].errors" class="invalid-feedback">
+                    <div *ngIf="r['password'].errors['required']">Please enter password.</div>
+                    <div *ngIf="r['password'].errors['pattern']">Please use at least 1 uppercase, 1 lowercase, 1 digit and special symbol.</div>
+                </div> -->
+            </div>
+            <div class="col mb-2"> 
+                <label for="rpwd">Repeate Password</label>
+                <input type="password" id="rpwd"  formControlName="rpassword">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 offset-3">
+                <div class="d-grid">
+                    <button type="submit" class="Commonbutton"  (click)="onSubmited()">Submit</button>
+                </div>
+            </div>
+        </div>
+       
+    </form>
+</div>

@@ -1,0 +1,115 @@
+<!-- <p>header works!</p> -->
+<!-- <nav class="NAVBAR">
+  <ul>
+    <li><a>Dashnoard</a></li>
+    <li><a>clients</a></li>
+    <li><a>myaccount</a></li>
+  </ul>
+
+</nav> -->
+
+<nav class="navbar navbar-expand-lg nav_bar">
+    <div class="container-fluid menubar">  
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">         
+          <!-- <li class="nav-item">
+            <a class="nav-link active" routerLink="/dashboard">Dashboard</a>
+          </li> -->
+          <li class="nav-item dropdown">
+           <button mat-button [matMenuTriggerFor]="dashbord">
+            <div class="valign-center">
+              <span>Dashboard</span>
+              <i class="material-icons">arrow_drop_down</i>
+            </div></button>
+            <mat-menu #dashbord="matMenu">  
+              <button mat-menu-item routerLink="/dashboard">dashboard1</button>
+            </mat-menu>
+           
+          </li> 
+          <li class="nav-item">
+            <button mat-button routerLink="/client">client</button>
+            <!-- <a class="nav-link active"  routerLink="/client">Client</a> -->
+        </li>
+        <!-- <li class="nav-item"> -->
+          <!-- <a class="nav-link active"  routerLink="/profile" >
+             <i class="bi bi-person-lines-fill" ></i></a> -->
+             <!-- <div class="sub-menu">
+              <ul>
+                <li><a href="">view proflie</a></li>
+                <li><a href="">logout</a></li>
+              </ul>
+             </div> -->
+        <!-- </li> -->
+         <ng-container *ngIf="loginblock"> 
+          <li class="nav-item" *ngIf="!isLoggedIn">
+            <a class="nav-link active" routerLink="/"></a>
+          </li>
+          <li class="nav-item" *ngIf="!isLoggedIn">
+            <a class="nav-link active"  routerLink="/login">Login</a>
+        </li>
+        <li class="nav-item" *ngIf="isLoggedIn" (click)="onlogout">
+          <!-- <a class="nav-link active" routerLink="/">
+            <i class="bi bi-box-arrow-right"></i>LogOut </a> -->
+      </li>
+        </ng-container>
+        <!-- <li>
+          <div class="dropdown">
+            <button onclick="showdropdown()" class="dropbtn btn">Dropdown</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#home">Home</a>
+              <a href="#about">About</a>
+              <a href="#contact">Contact</a>
+            </div>
+          </div>
+        </li> -->
+        <!-- <mat-form-field>
+          <mat-select  >
+            <mat-option *ngFor="let food of foods" [value]="food.value">
+              {{ food.viewValue }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field> -->
+
+        <!-- <mat-drawer-container>
+          <mat-drawer #drawer opened="true" mode="side">
+            <mat-nav-list>
+              <mat-list-item>
+                <button mat-button><mat-icon>logout</mat-icon>logout</button>
+              </mat-list-item>
+            </mat-nav-list>
+          </mat-drawer>
+          <mat-drawer-content>
+          </mat-drawer-content>
+        </mat-drawer-container> -->
+         
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li> -->
+            
+           <!-- <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+          </li> -->
+          <li>
+            <button mat-button [matMenuTriggerFor]="menu" >
+              <div class="valign-center" (click)="profiledata()" >
+                <span>myaccount</span>
+                <i class="material-icons">arrow_drop_down</i>
+              </div></button>
+            <mat-menu #menu="matMenu" class="menu_dropdown" >
+              <!-- <button mat-menu-item (click)="menuItemClicked('Option 1')">{{user.Name}}</button>  -->
+              <!-- <button mat-menu-item (click)="menuItemClicked('Option 2')">Option 2</button>  -->
+              <p class="menu_P">{{name}}</p>
+              <hr>
+              <p class="menu_P">{{email}}</p>
+              <hr>
+              <button mat-menu-item (click)="menuItemClicked('Option 3')" routerLink="/login">LogOut</button>
+            </mat-menu>
+          </li>
+        </ul> 
+        <!-- <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>  -->
+      </div>
+    </div>
+  </nav>

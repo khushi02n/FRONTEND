@@ -1,0 +1,47 @@
+<app-header></app-header>
+
+<div class="client">
+<!-- <a routerLink="client">clients</a> -->
+<!-- <button mat-riased-button color="primary" class="btn" (click)="OpenPopUp()"class="client">+New Client</button> -->
+</div>
+<div class="container client " >
+    <div class="searchButton">  
+        <div>
+            <button mat-raised-button color="primary" (click)="OpenPopUp()">+New Client</button>
+        </div>
+        <div>        
+        <!-- <form class="d-flex" role="search" [formGroup]="searchForm"   > 
+            <input matInput class="form-control searchInput" type="search" placeholder="Search" class="bi bi-search" 
+            aria-label="Search" name="name" [(ngModel)]="name" formControlName="name" >  
+            <button ><i class="bi bi-search" (ngModelChange)=" search()" ></i></button>
+        </form>  -->
+    </div>
+    </div>
+    <table class="table" (ngSubmit)="showdata()" id="tbldata">
+        <thead>
+            <tr>            
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Mobile</th>
+                    <th>Email</th>  
+                    <th>Amount</th>  
+                    <th>Status</th>  
+                    <th>Action</th>                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of userdata "> 
+                <td>{{user.Id}}</td>
+                <td>{{user.Name}}</td>
+                <td>{{user.Mobile}}</td>
+                <td>{{user.Email}}</td>
+                <td>{{user.amount}}</td>
+                <td>{{user.Status}}</td>
+                <td>
+                    <!-- <i class="bi bi-pencil-square px-2"></i> -->
+                    <i class="bi bi-trash" (click)="onDelete(user.Id)"></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

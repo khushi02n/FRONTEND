@@ -1,0 +1,98 @@
+<app-header></app-header>
+
+<div>
+    <button class="btn" >ActiveClient:{{activeclient}}</button>
+    <button class="btn">InActiveClient:{{inactiveclient}}</button> 
+    <button class="btn">Total Client:{{totalclient}}</button> 
+    <button class="btn">Total Amount:{{amount}}</button> 
+</div>
+<div class="container">
+    <div class="carousel" >
+        <owl-carousel-o [options]="customOptions"  >
+            <ng-template carouselSlide  ><img src="../../assets/1.jpg" alt="img1"></ng-template>
+            <ng-template carouselSlide  ><img src="../../assets/2.jpg" alt="img2"></ng-template>
+            <ng-template carouselSlide  ><img src="../../assets/1.jpg" alt="img1"></ng-template>
+            <ng-template carouselSlide  ><img src="../../assets/2.jpg" alt="img2"></ng-template>
+            <!-- <ng-template carouselSlide  ><img src="../../assets/3.jpg" alt="img3"></ng-template> -->
+        <!-- <ng-template carouselSlide  > card4</ng-template>   -->
+        </owl-carousel-o>      
+    </div> 
+</div>
+
+<div class="container c">
+    <div class="col-lg-6 chart">
+        <h2>Pie Chart</h2>
+        <canvas id="piechart"></canvas>
+    </div>
+</div>
+
+
+
+
+
+
+<!-- <p>dashboard works!</p>
+
+<mat-card class="cards" >Simple card</mat-card>
+
+<mat-card-content >
+   
+</mat-card-content>
+
+<table>
+    <th></th>
+</table> -->
+
+<!-- <ng-container>
+    <p>total clients</p>
+    <p >{{a.id}}</p>
+    <button mat-button (click)="showcount()">show</button>
+</ng-container> -->
+<!-- <div  *ngFor="let a of clients">
+    <p>total clients</p>
+    <p >{{a.id}}</p>
+</div> -->
+
+<!-- <table class="table" (ngSubmit)="showcount()" id="tbldata">
+    <thead>
+        <tr>            
+                <th>Total Count</th>
+                             
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let a of clients"> 
+            <td>{{a.Id}}</td>
+    </tr>
+</tbody>
+<button mat-button (click)="showcount()">show</button>
+</table> -->
+
+ <!-- <div >
+    <table class="table" >
+        <thead>
+            <tr><th>total count</th></tr>
+        </thead>
+        <tbody>
+            <tr >
+                <td>{{data}}</td>
+            </tr>
+        </tbody>
+    </table>
+       -->
+    <!-- <button (click)="  showcount()">show</button> -->
+
+<!-- </div> -->
+<!-- <div>
+    <h2>Data from Server</h2>
+     <div *ngIf="userdata.status === 'success' && data.ArrayOfResponse.length > 0; else noData">
+      <ul>
+        <li *ngFor="let item of data.ArrayOfResponse">
+          ID: {{ item.id }}, Name: {{ item.name }}, Status: {{ item.status }}
+        </li>
+      </ul>
+    </div> 
+    <ng-template #noData>
+      <p>No data found.</p>
+    </ng-template>
+  </div> -->

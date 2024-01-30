@@ -1,0 +1,46 @@
+.cards{
+    //background-color: black;
+    width: fit-content;
+    height: fit-content;
+    
+   // color: white;
+    text-transform: capitalize;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    text-align: center;
+    padding: 20px;
+    color: blue;
+    font-weight: 900;
+}
+
+.carousel{
+    // background-color: aqua;
+    height: 200px;
+    // box-shadow: 5px 3px 5px 5px rgba(211, 209, 209, 0.473) ;
+    margin-bottom: 70px;
+    margin-top: 60px;
+  
+    img{
+        width: 100px;
+        height: 100px;
+        margin: 30px;
+
+        
+    }
+}
+.chart{
+   //background-color: lightblue;
+    height: 200px;
+    width: 300px;
+}
+canvas{
+
+    // background-color: lightblue;
+    // border: .5px solid black;
+    box-shadow: 5px 5px rgba(211, 209, 209, 0.473);
+}
+.owl-theme .owl-dots .owl-dot {
+    background-color: black; // Set your desired color
+  }
+  

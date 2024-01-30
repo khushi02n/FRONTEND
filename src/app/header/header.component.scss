@@ -1,0 +1,43 @@
+nav{
+
+  ul{
+ //   background-color: aqua;
+    margin-left: 35%;
+    gap: 25px;
+    font-size: 30px;
+
+    
+  }
+}
+
+.NAVBAR ul  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+ 
+}
+
+.valign-center{
+  display: inline-flex;
+  align-items: center;
+}
+.nav_bar{
+  background-color: lightblue;
+
+  
+ 
+   button{
+    color: #fff;
+   font-size: 18px;
+   
+   }
+ 
+}
+
+
+.menu_P{
+  font-size: small;
+  text-align: center;
+  //color: blue;
+}

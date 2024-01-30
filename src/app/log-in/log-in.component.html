@@ -1,0 +1,21 @@
+<div class="container loginfrom">
+    <form class="col-4" [formGroup]="loginFrom" (ngSubmit)="onLoginClick()">
+        <div class="row">
+            <label>User Name</label>
+            <input type="text" formControlName="username" class="form-input Commontextbox">
+        </div>
+        <div class="row">
+            <label>Password</label>
+            <input type="password" formControlName="password" class="form-input Commontextbox">
+        </div>
+        <div class="col-6   ">
+            <button type="submit" class="commonbutton btn">Login</button>
+        </div>
+        <div class="forgetpassword">
+            <a routerLink="forgetpassword">Forget Password</a>
+        </div>
+    </form>
+    <div class="col-4">
+        <button type="menu" routerLink="/createaccount" class="btn">Create Account</button>
+    </div>
+</div>
